@@ -30,11 +30,12 @@ public class Main extends SimpleApplication {
 
     @Override
     public void simpleInitApp() {
-         /** Load a model. Uses model and texture from jme3-test-data library! */ 
+        
+        /** Load a model mario rig Scene and add to Root Node */ 
         Spatial MarioRig_Root_scene = assetManager.loadModel("Models/Mario_rigging_compatible_con_godot_engine/Mario_rigging_compatible_con_godot_engine.j3o");
         rootNode.attachChild(MarioRig_Root_scene);
         
-        
+        //Tools of animations
         AnimChannel channel_anim_mario;
         AnimControl control_anim_mario;
         
@@ -43,7 +44,8 @@ public class Main extends SimpleApplication {
         control_anim_mario = MarioRig.getControl(AnimControl.class);
         System.out.println("rig mario control is: " + control_anim_mario);
         
-        //control.addListener((AnimEventListener) this);
+        //Play Animation
+        //control.addListener((AnimEventListener) this);//no work
         channel_anim_mario = control_anim_mario.createChannel();
         channel_anim_mario.setAnim("saltar_alto");
         
