@@ -48,17 +48,7 @@ public class Main extends SimpleApplication {
         //control.addListener((AnimEventListener) this);//no work
         channel_anim_mario = control_anim_mario.createChannel();
         channel_anim_mario.setAnim("saltar_alto");
-        
-        
-
-        //control_Anim_Mario.addListener(this);
-        
-        
-        //control_Anim_Mario.addListener(this);
-        //System.out.println(control_Anim_Mario);
-        //playerControl = MarioRig.getControl(AnimControl.class); // get control over this model
-
-        //animComposer.action("correr");
+       
     }
 
     @Override
